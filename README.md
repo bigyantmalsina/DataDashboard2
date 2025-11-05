@@ -1,63 +1,57 @@
-# Web Development Project 5 - *Google Books Dashboard*
+# Web Development Project 6 - Google Books Dashboard
 
 Submitted by: **Bigyan Timalsina**
 
-This web app: **displays a searchable, filterable dashboard of books fetched from the Google Books API. Users can view key details, apply filters, and see summary statistics about the data.**
+This web app: **A React-based data dashboard that visualizes book data fetched from the Google Books API. It allows users to explore books, view detailed information, and analyze data trends through interactive charts.**
 
-Time spent: **10 hours in total**
+Time spent: **10 hours spent in total**
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The site has a dashboard displaying a list of data fetched using an API call**
-  - The dashboard displays more than 10 unique books, one per row.
-  - Each book card includes at least two features: title, author, thumbnail, and published year.
-
-- [x] **`useEffect` React hook and `async`/`await` are used**
-  - Data is fetched from the Google Books API using `async/await` inside a `useEffect` hook.
-
-- [x] **The app dashboard includes at least three summary statistics about the data** 
-  - Total number of books displayed.
-  - Number of unique authors in the current list.
-  - Average publication year of the displayed books.
-
-- [x] **A search bar allows the user to search for an item in the fetched data**
-  - The search bar correctly filters items in the list, only displaying books matching the search query.
-  - The list of results dynamically updates as the user types into the search bar.
-
-- [x] **An additional filter allows the user to restrict displayed items by specified categories**
-  - The filter restricts items in the list using a different attribute than the search bar (e.g., book category).
-  - The filter correctly filters items in the list, only displaying items matching the selected filter.
-  - The dashboard list dynamically updates as the user adjusts the filter.
-
-## Optional Features
+- [x] **Clicking on an item in the list view displays more details about it**
+  - Clicking on an item in the dashboard list navigates to a detail view for that item
+  - Detail view includes extra information about the item not included in the dashboard view
+  - The same sidebar is displayed in detail view as in dashboard view
+  - *To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.*
+- [x] **Each detail view of an item has a direct, unique URL link to that item’s detail view page**
+  -  *To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.*
+- [x] **The app includes at least two unique charts developed using the fetched data that tell an interesting story**
+  - At least two charts are incorporated into the dashboard view of the site
+  - Each chart describes a different aspect of the dataset
 
 The following **optional** features are implemented:
 
-- [x] Multiple filters can be applied simultaneously.
-- [x] Filters use different input types (text input and dropdown selection).
-- [x] The user can click “Load More” to fetch more books from the API.
+- [x] The site’s customized dashboard contains more content that explains what is interesting about the data 
+  - e.g., an additional description, graph annotation, suggestion for which filters to use, or an additional page that explains more about the data
+- [x] The site allows users to toggle between different data visualizations
+  - User can toggle between displaying and hiding visualizations 
 
-## Additional Features
+The following **additional** features are implemented:
 
-- [x] Clean and responsive design using CSS.
-- [x] Error handling for missing book images or data.
-- [x] Loading indicator while data is being fetched.
+* [x] Added a search bar to find books by title or author  
+* [x] Added category filters for more control over displayed books  
+* [x] Integrated Recharts for interactive and responsive graphs  
+* [x] Designed a consistent and responsive layout with sidebar navigation  
+* [x] Included error handling for missing or incomplete API data  
+* [x] Used React Router for dynamic routes and clean navigation  
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://submissions.us-east-1.linodeobjects.com/web102/WyvR9AJv.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='Dashboard.mov' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='BookDashboard.mov' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with **Adobe** (macOS).
+GIF created with **Adobe Creative Cloud**  
 
 ## Notes
 
-While building this app, I learned how to work with external APIs, React state management, and data filtering using array methods like `.map()` and `.filter()`.  
-The main challenge was structuring API responses and dynamically updating filters efficiently.
+Challenges faced while building the app:
+- Handling missing or undefined fields in the API response (some books had no authors or categories)
+- Structuring and cleaning the JSON data to feed into Recharts
+- Maintaining layout consistency while switching between dashboard and detail views
+- Implementing dynamic routing with React Router while preserving the sidebar
 
 ## License
 
